@@ -7,6 +7,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://www.jsviews.com/download/jsviews.min.js"></script>
     <title>Scrabble Practice</title>
   </head>
   <body>
@@ -39,5 +40,9 @@
         <button id="revealWord">Reveal Word</button>
       </div>
     </div>
+
+    <script type="text/jsrender" id="tile-template">
+      {{:letter}}
+    </script>
   </body>
 </html>
