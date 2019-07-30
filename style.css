@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  font-size: 2em;
+}
+
+.board {
+  border: 5px black solid;
+  display: flex;
+  width: 410px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#buttons {
+  display: flex;
+  width: 340px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#word {
+  align-content: center;
+  text-align: center;
+}
+
+#response {
+  align-content: center;
+  text-align: center;
+}
+
+.board div {
+  height: 50px;
+  width: 50px;
+  border: 5px grey solid;
+}
+
+.tile {
+  text-align: center;
+  line-height: 50px;
+}
+.tile:hover {
+  background-color: lightsteelblue;
+  transition: 250ms;
+  cursor: pointer;
+}
+
+header {
+  align-content: center;
+  text-align: center;
+}
