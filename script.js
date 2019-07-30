@@ -73,17 +73,21 @@ $(document).ready(function() {
     for (let i = 0; i < 7; ++i) {
       answer += $(`#tileTop${i}`).text();
     }
-    $.ajax({
-      method: "GET",
-      url: `http://tom.mo2.dinksurveys.net/api/1.0/isword?word=${answer}`,
-      dataType: "json"
-    }).done(function(data) {
-      if (data.isWord === false) {
-        $("#response").text("Try Again!");
-      } else {
-        $("#response").text("Well Done!");
-      }
-    });
+    if (answer.length < 5) {
+      $("#response").text("Try Again!");
+    } else {
+      $.ajax({
+        method: "GET",
+        url: `http://tom.mo2.dinksurveys.net/api/1.0/isword?word=${answer}`,
+        dataType: "json"
+      }).done(function(data) {
+        if (data.isWord === false) {
+          $("#response").text("Try Again!");
+        } else {
+          $("#response").text("Well Done!");
+        }
+      });
+    }
   });
 
   // Onclick functionality for reveal word button
